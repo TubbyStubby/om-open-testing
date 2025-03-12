@@ -1,7 +1,7 @@
 ![Open Match](https://github.com/googleforgames/open-match-docs/blob/master/site/static/images/logo-with-name.png)
 
-[![GoDoc](https://godoc.org/open-match.dev/open-match?status.svg)](https://godoc.org/open-match.dev/open-match)
-[![Go Report Card](https://goreportcard.com/badge/open-match.dev/open-match)](https://goreportcard.com/report/open-match.dev/open-match)
+[![GoDoc](https://godoc.org/github.com/TubbyStubby/om-open-testing?status.svg)](https://godoc.org/github.com/TubbyStubby/om-open-testing)
+[![Go Report Card](https://goreportcard.com/badge/github.com/TubbyStubby/om-open-testing)](https://goreportcard.com/report/github.com/TubbyStubby/om-open-testing)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/googleforgames/open-match/blob/master/LICENSE)
 [![GitHub release](https://img.shields.io/github/release-pre/googleforgames/open-match.svg)](https://github.com/googleforgames/open-match/releases)
 [![Follow on Twitter](https://img.shields.io/twitter/follow/Open_Match.svg?style=social&logo=twitter)](https://twitter.com/intent/follow?screen_name=Open_Match)

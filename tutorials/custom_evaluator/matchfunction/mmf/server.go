@@ -20,7 +20,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // matchFunctionService implements pb.MatchFunctionServer, the server generated

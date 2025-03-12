@@ -17,9 +17,9 @@ package statestore
 import (
 	"context"
 
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/telemetry"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // Service is a generic interface for talking to a storage backend.

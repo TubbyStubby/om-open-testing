@@ -24,9 +24,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"go.opencensus.io/stats/view"
-	"open-match.dev/open-match/internal/app/evaluator"
-	"open-match.dev/open-match/internal/appmain"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/app/evaluator"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 var (

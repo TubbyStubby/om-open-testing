@@ -17,7 +17,7 @@ package main
 import (
 	"math/rand"
 
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // Ticket generates a Ticket with a mode search field that has one of the

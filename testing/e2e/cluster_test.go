@@ -27,10 +27,10 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
-	"open-match.dev/open-match/internal/app/evaluator"
-	"open-match.dev/open-match/internal/appmain/apptest"
-	"open-match.dev/open-match/pkg/pb"
-	mmfService "open-match.dev/open-match/testing/mmf"
+	"github.com/TubbyStubby/om-open-testing/internal/app/evaluator"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain/apptest"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
+	mmfService "github.com/TubbyStubby/om-open-testing/testing/mmf"
 )
 
 func TestServiceHealth(t *testing.T) {

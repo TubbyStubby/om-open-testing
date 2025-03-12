@@ -15,7 +15,7 @@
 # When updating Go version, update Dockerfile.ci, Dockerfile.base-build, and go.mod
 FROM golang:1.21.5
 
-WORKDIR /go/src/open-match.dev/open-match
+WORKDIR /go/src/github.com/TubbyStubby/om-open-testing
 
 # First copy only the go.sum and go.mod then download dependencies. Docker
 # caching is [in]validated by the input files changes.  So when the dependencies

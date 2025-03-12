@@ -1,4 +1,4 @@
-module open-match.dev/open-match/tutorials/matchmaker101/matchfunction
+module github.com/TubbyStubby/om-open-testing/tutorials/matchmaker101/matchfunction
 
 go 1.21
 
@@ -7,7 +7,7 @@ toolchain go1.21.5
 require (
 	google.golang.org/grpc v1.57.1
 	google.golang.org/protobuf v1.34.1
-	open-match.dev/open-match v0.0.0-dev
+	github.com/TubbyStubby/om-open-testing v0.0.0-dev
 )
 
 require (
@@ -21,4 +21,4 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20230815205213-6bfd019c3878 // indirect
 )
 
-replace open-match.dev/open-match v0.0.0-dev => ../../../../
+replace github.com/TubbyStubby/om-open-testing v0.0.0-dev => ../../../../

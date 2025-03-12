@@ -23,10 +23,10 @@ import (
 	"testing"
 	"time"
 
-	"open-match.dev/open-match/internal/app/evaluator"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/statestore"
-	mmfService "open-match.dev/open-match/testing/mmf"
+	"github.com/TubbyStubby/om-open-testing/internal/app/evaluator"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/statestore"
+	mmfService "github.com/TubbyStubby/om-open-testing/testing/mmf"
 )
 
 func start(t *testing.T, eval evaluator.Evaluator, mmf mmfService.MatchFunction) (config.View, func(time.Duration)) {

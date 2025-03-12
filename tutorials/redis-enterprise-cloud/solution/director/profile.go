@@ -17,7 +17,7 @@ package main
 import (
 	"fmt"
 
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // generateProfiles generates test profiles for the matchmaker101 tutorial.

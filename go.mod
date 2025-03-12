@@ -1,4 +1,4 @@
-module open-match.dev/open-match
+module github.com/TubbyStubby/om-open-testing
 
 // Copyright 2019 Google LLC
 //

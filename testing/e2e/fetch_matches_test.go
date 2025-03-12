@@ -26,8 +26,8 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
-	"open-match.dev/open-match/pkg/matchfunction"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/matchfunction"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // TestHappyPath does a simple test of successfully creating a match with two tickets.

@@ -19,7 +19,7 @@ import (
 	"context"
 
 	"golang.org/x/sync/errgroup"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // MatchFunction is the function signature for the Match Making Function (MMF) to be implemented by the user.

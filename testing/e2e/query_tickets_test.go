@@ -22,8 +22,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"open-match.dev/open-match/internal/filter/testcases"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/filter/testcases"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 func TestNoPool(t *testing.T) {

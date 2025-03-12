@@ -21,7 +21,7 @@ import (
 
 	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 const (

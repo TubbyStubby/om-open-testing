@@ -16,8 +16,8 @@
 package main
 
 import (
-	"open-match.dev/open-match/internal/app/query"
-	"open-match.dev/open-match/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/internal/app/query"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
 )
 
 func main() {

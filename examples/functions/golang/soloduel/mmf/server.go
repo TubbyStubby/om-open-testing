@@ -24,7 +24,7 @@ import (
 	"net"
 
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // Start creates and starts the Match Function server and also connects to Open

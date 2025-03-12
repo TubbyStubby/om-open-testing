@@ -23,7 +23,7 @@ package ipb
 import (
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
-	pb "open-match.dev/open-match/pkg/pb"
+	pb "github.com/TubbyStubby/om-open-testing/pkg/pb"
 	reflect "reflect"
 	sync "sync"
 )

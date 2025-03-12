@@ -31,10 +31,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/telemetry"
-	utilTesting "open-match.dev/open-match/internal/util/testing"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
+	utilTesting "github.com/TubbyStubby/om-open-testing/internal/util/testing"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 func TestStatestoreSetup(t *testing.T) {

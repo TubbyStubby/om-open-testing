@@ -19,7 +19,7 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	"open-match.dev/open-match/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
 )
 
 func TestGetPageSize(t *testing.T) {

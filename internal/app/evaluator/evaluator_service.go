@@ -22,7 +22,7 @@ import (
 	"github.com/pkg/errors"
 	"go.opencensus.io/stats"
 	"golang.org/x/sync/errgroup"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // Evaluator is the function signature for the Evaluator to be implemented by

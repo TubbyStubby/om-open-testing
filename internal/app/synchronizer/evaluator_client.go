@@ -27,9 +27,9 @@ import (
 	"golang.org/x/sync/errgroup"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/rpc"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/rpc"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 var (

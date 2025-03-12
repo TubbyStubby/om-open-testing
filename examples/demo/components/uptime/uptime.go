@@ -17,7 +17,7 @@ package uptime
 import (
 	"time"
 
-	"open-match.dev/open-match/examples/demo/components"
+	"github.com/TubbyStubby/om-open-testing/examples/demo/components"
 )
 
 func Run(ds *components.DemoShared) {

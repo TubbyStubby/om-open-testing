@@ -40,9 +40,9 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/resolver"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/logging"
-	"open-match.dev/open-match/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/logging"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
 )
 
 const (

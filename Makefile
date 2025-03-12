@@ -666,7 +666,7 @@ pkg/pb/%.pb.go: api/%.proto third_party/ build/toolchain/bin/protoc$(EXE_EXTENSI
 		-I $(REPOSITORY_ROOT) -I $(PROTOC_INCLUDES) \
 		--go_out=$(REPOSITORY_ROOT)/build/prototmp \
 		--go-grpc_out=require_unimplemented_servers=false:$(REPOSITORY_ROOT)/build/prototmp 
-	mv $(REPOSITORY_ROOT)/build/prototmp/open-match.dev/open-match/pkg/pb/* $(REPOSITORY_ROOT)/pkg/pb/
+	mv $(REPOSITORY_ROOT)/build/prototmp/github.com/TubbyStubby/om-open-testing/pkg/pb/* $(REPOSITORY_ROOT)/pkg/pb/
 
 internal/ipb/%.pb.go: internal/api/%.proto third_party/ build/toolchain/bin/protoc$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-go$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-go-grpc$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-grpc-gateway$(EXE_EXTENSION)
 	mkdir -p $(REPOSITORY_ROOT)/build/prototmp $(REPOSITORY_ROOT)/internal/ipb
@@ -674,14 +674,14 @@ internal/ipb/%.pb.go: internal/api/%.proto third_party/ build/toolchain/bin/prot
 		-I $(REPOSITORY_ROOT) -I $(PROTOC_INCLUDES) \
 		--go_out=$(REPOSITORY_ROOT)/build/prototmp \
 		--go-grpc_out=require_unimplemented_servers=false:$(REPOSITORY_ROOT)/build/prototmp 
-	mv $(REPOSITORY_ROOT)/build/prototmp/open-match.dev/open-match/internal/ipb/* $(REPOSITORY_ROOT)/internal/ipb/
+	mv $(REPOSITORY_ROOT)/build/prototmp/github.com/TubbyStubby/om-open-testing/internal/ipb/* $(REPOSITORY_ROOT)/internal/ipb/
 
 pkg/pb/%.pb.gw.go: api/%.proto third_party/ build/toolchain/bin/protoc$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-go$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-go-grpc$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-grpc-gateway$(EXE_EXTENSION)
 	mkdir -p $(REPOSITORY_ROOT)/build/prototmp $(REPOSITORY_ROOT)/pkg/pb
 	$(PROTOC) $< \
 		-I $(REPOSITORY_ROOT) -I $(PROTOC_INCLUDES) \
    		--grpc-gateway_out=logtostderr=true,allow_delete_body=true:$(REPOSITORY_ROOT)/build/prototmp
-	mv $(REPOSITORY_ROOT)/build/prototmp/open-match.dev/open-match/pkg/pb/* $(REPOSITORY_ROOT)/pkg/pb/
+	mv $(REPOSITORY_ROOT)/build/prototmp/github.com/TubbyStubby/om-open-testing/pkg/pb/* $(REPOSITORY_ROOT)/pkg/pb/
 
 api/%.swagger.json: api/%.proto third_party/ build/toolchain/bin/protoc$(EXE_EXTENSION) build/toolchain/bin/protoc-gen-openapiv2$(EXE_EXTENSION)
 	$(PROTOC) $< \
@@ -783,7 +783,7 @@ $(foreach CMD,$(CMDS),build/cmd/$(CMD)): build/cmd/%: build/cmd/%/BUILD_PHONY bu
 
 build/cmd/%/BUILD_PHONY:
 	mkdir -p $(BUILD_DIR)/cmd/$*
-	CGO_ENABLED=0 $(GO) build -v -installsuffix cgo -o $(BUILD_DIR)/cmd/$*/run open-match.dev/open-match/cmd/$*
+	CGO_ENABLED=0 $(GO) build -v -installsuffix cgo -o $(BUILD_DIR)/cmd/$*/run github.com/TubbyStubby/om-open-testing/cmd/$*
 
 # Default is that nothing needs to be copied into the direcotry
 build/cmd/%/COPY_PHONY:

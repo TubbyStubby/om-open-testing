@@ -26,9 +26,9 @@ import (
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/emptypb"
 	"google.golang.org/protobuf/types/known/timestamppb"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/statestore"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/statestore"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // frontendService implements the Frontend service that is used to create

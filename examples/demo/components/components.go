@@ -17,7 +17,7 @@ package components
 import (
 	"context"
 
-	"open-match.dev/open-match/examples/demo/updater"
+	"github.com/TubbyStubby/om-open-testing/examples/demo/updater"
 )
 
 type DemoShared struct {

@@ -18,7 +18,7 @@ import (
 	"context"
 
 	"go.opencensus.io/trace"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // instrumentedService is a wrapper for a statestore service that provides instrumentation (metrics and tracing) of the database.

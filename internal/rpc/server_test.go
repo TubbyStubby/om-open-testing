@@ -25,10 +25,10 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
-	"open-match.dev/open-match/internal/telemetry"
-	utilTesting "open-match.dev/open-match/internal/util/testing"
-	"open-match.dev/open-match/pkg/pb"
-	shellTesting "open-match.dev/open-match/testing"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
+	utilTesting "github.com/TubbyStubby/om-open-testing/internal/util/testing"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
+	shellTesting "github.com/TubbyStubby/om-open-testing/testing"
 )
 
 func TestStartStopServer(t *testing.T) {

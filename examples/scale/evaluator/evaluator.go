@@ -20,11 +20,11 @@ import (
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
 
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 
-	utilTesting "open-match.dev/open-match/internal/util/testing"
+	utilTesting "github.com/TubbyStubby/om-open-testing/internal/util/testing"
 
-	"open-match.dev/open-match/examples/scale/scenarios"
+	"github.com/TubbyStubby/om-open-testing/examples/scale/scenarios"
 )
 
 var (

@@ -26,7 +26,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/protobuf/encoding/protojson"
-	"open-match.dev/open-match/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
 )
 
 const (

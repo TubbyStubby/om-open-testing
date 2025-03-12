@@ -15,7 +15,7 @@
 package main
 
 import (
-	scaleMmf "open-match.dev/open-match/examples/scale/mmf"
+	scaleMmf "github.com/TubbyStubby/om-open-testing/examples/scale/mmf"
 )
 
 func main() {

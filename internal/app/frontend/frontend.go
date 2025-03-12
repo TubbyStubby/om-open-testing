@@ -18,10 +18,10 @@ import (
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/internal/appmain"
-	"open-match.dev/open-match/internal/statestore"
-	"open-match.dev/open-match/internal/telemetry"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/internal/statestore"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 var (

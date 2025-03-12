@@ -16,7 +16,7 @@
 package main
 
 import (
-	"open-match.dev/open-match/internal/app/swaggerui"
+	"github.com/TubbyStubby/om-open-testing/internal/app/swaggerui"
 )
 
 func main() {

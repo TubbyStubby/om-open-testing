@@ -36,11 +36,11 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/types/known/timestamppb"
-	"open-match.dev/open-match/internal/appmain/contextcause"
-	"open-match.dev/open-match/internal/ipb"
-	"open-match.dev/open-match/internal/rpc"
-	"open-match.dev/open-match/internal/statestore"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain/contextcause"
+	"github.com/TubbyStubby/om-open-testing/internal/ipb"
+	"github.com/TubbyStubby/om-open-testing/internal/rpc"
+	"github.com/TubbyStubby/om-open-testing/internal/statestore"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // The service implementing the Backend API that is called to generate matches

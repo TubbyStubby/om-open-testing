@@ -17,8 +17,8 @@ package mmf
 
 import (
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/internal/appmain"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // BindServiceFor creates the match function service and binds it to the serving harness.

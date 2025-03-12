@@ -19,7 +19,7 @@ import (
 	"sort"
 	"time"
 
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 type matchEval struct {

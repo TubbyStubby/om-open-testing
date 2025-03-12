@@ -36,9 +36,9 @@ import (
 	"go.opencensus.io/plugin/ochttp/propagation/b3"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/keepalive"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/logging"
-	"open-match.dev/open-match/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/logging"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
 )
 
 const (

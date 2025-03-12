@@ -14,7 +14,7 @@
 
 FROM open-match-base-build as builder
 
-WORKDIR /go/src/open-match.dev/open-match
+WORKDIR /go/src/github.com/TubbyStubby/om-open-testing
 
 ARG IMAGE_TITLE
 
@@ -26,7 +26,7 @@ FROM gcr.io/distroless/static:nonroot
 ARG IMAGE_TITLE
 WORKDIR /app/
 
-COPY --from=builder --chown=nonroot "/go/src/open-match.dev/open-match/build/cmd/${IMAGE_TITLE}/" "/app/"
+COPY --from=builder --chown=nonroot "/go/src/github.com/TubbyStubby/om-open-testing/build/cmd/${IMAGE_TITLE}/" "/app/"
 
 ENTRYPOINT ["/app/run"]
 

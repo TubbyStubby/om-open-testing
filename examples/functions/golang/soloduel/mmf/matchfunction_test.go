@@ -17,7 +17,7 @@ package mmf
 import (
 	"testing"
 
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 
 	"github.com/stretchr/testify/require"
 )

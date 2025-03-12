@@ -28,9 +28,9 @@ import (
 	"google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/wrapperspb"
-	"open-match.dev/open-match/internal/config"
-	utilTesting "open-match.dev/open-match/internal/util/testing"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	utilTesting "github.com/TubbyStubby/om-open-testing/internal/util/testing"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 func TestCreateBackfillLastAckTime(t *testing.T) {

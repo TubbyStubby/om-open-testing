@@ -23,8 +23,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	"open-match.dev/open-match/examples/demo/components"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/examples/demo/components"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 func Run(ds *components.DemoShared) {

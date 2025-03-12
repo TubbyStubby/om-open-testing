@@ -21,9 +21,9 @@ import (
 
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/internal/appmain"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/rpc"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/rpc"
 )
 
 // ServiceName is a constant used for all in memory tests.

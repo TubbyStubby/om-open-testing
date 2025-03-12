@@ -19,9 +19,9 @@ import (
 
 	"github.com/spf13/viper"
 	"github.com/stretchr/testify/require"
-	"open-match.dev/open-match/internal/statestore"
-	utilTesting "open-match.dev/open-match/internal/util/testing"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/internal/statestore"
+	utilTesting "github.com/TubbyStubby/om-open-testing/internal/util/testing"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 func TestFakeStatestore(t *testing.T) {

@@ -19,11 +19,11 @@ import (
 
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/examples/scale/scenarios/backfill"
-	"open-match.dev/open-match/examples/scale/scenarios/firstmatch"
-	"open-match.dev/open-match/internal/util/testing"
-	"open-match.dev/open-match/pkg/matchfunction"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/examples/scale/scenarios/backfill"
+	"github.com/TubbyStubby/om-open-testing/examples/scale/scenarios/firstmatch"
+	"github.com/TubbyStubby/om-open-testing/internal/util/testing"
+	"github.com/TubbyStubby/om-open-testing/pkg/matchfunction"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 var (

@@ -20,7 +20,7 @@
 package main
 
 import (
-	"open-match.dev/open-match/tutorials/matchmaker101/matchfunction/mmf"
+	"github.com/TubbyStubby/om-open-testing/tutorials/matchmaker101/matchfunction/mmf"
 )
 
 // This tutorial implenents a basic Match Function that is hosted in the below

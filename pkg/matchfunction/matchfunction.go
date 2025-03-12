@@ -21,7 +21,7 @@ import (
 	"io"
 
 	"google.golang.org/grpc"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // QueryPool queries queryService and returns the tickets that belong to the specified pool.

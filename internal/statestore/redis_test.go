@@ -4,8 +4,8 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/require"
-	utilTesting "open-match.dev/open-match/internal/util/testing"
-	"open-match.dev/open-match/pkg/pb"
+	utilTesting "github.com/TubbyStubby/om-open-testing/internal/util/testing"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 func TestNewMutex(t *testing.T) {

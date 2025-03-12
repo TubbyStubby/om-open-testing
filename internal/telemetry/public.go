@@ -22,7 +22,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/trace"
-	"open-match.dev/open-match/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
 )
 
 var (

@@ -21,8 +21,8 @@ import (
 
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"open-match.dev/open-match/pkg/matchfunction"
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/matchfunction"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // This match function fetches all the Tickets for all the pools specified in

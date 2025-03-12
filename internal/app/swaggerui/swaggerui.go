@@ -25,10 +25,10 @@ import (
 	"path/filepath"
 
 	"github.com/sirupsen/logrus"
-	"open-match.dev/open-match/internal/config"
-	"open-match.dev/open-match/internal/logging"
-	"open-match.dev/open-match/internal/rpc"
-	"open-match.dev/open-match/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/internal/config"
+	"github.com/TubbyStubby/om-open-testing/internal/logging"
+	"github.com/TubbyStubby/om-open-testing/internal/rpc"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
 )
 
 var (

@@ -15,8 +15,8 @@
 package main
 
 import (
-	"open-match.dev/open-match/internal/app/evaluator/defaulteval"
-	"open-match.dev/open-match/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/internal/app/evaluator/defaulteval"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
 )
 
 func main() {

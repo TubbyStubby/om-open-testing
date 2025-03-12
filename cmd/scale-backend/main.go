@@ -15,8 +15,8 @@
 package main
 
 import (
-	"open-match.dev/open-match/examples/scale/backend"
-	"open-match.dev/open-match/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/examples/scale/backend"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
 )
 
 func main() {

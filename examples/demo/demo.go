@@ -24,10 +24,10 @@ import (
 	"net/http"
 
 	"golang.org/x/net/websocket"
-	"open-match.dev/open-match/examples/demo/bytesub"
-	"open-match.dev/open-match/examples/demo/components"
-	"open-match.dev/open-match/examples/demo/updater"
-	"open-match.dev/open-match/internal/telemetry"
+	"github.com/TubbyStubby/om-open-testing/examples/demo/bytesub"
+	"github.com/TubbyStubby/om-open-testing/examples/demo/components"
+	"github.com/TubbyStubby/om-open-testing/examples/demo/updater"
+	"github.com/TubbyStubby/om-open-testing/internal/telemetry"
 )
 
 // Run starts the provided components, and hosts a webserver for observing the

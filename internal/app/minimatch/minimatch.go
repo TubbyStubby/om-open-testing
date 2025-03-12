@@ -15,11 +15,11 @@
 package minimatch
 
 import (
-	"open-match.dev/open-match/internal/app/backend"
-	"open-match.dev/open-match/internal/app/frontend"
-	"open-match.dev/open-match/internal/app/query"
-	"open-match.dev/open-match/internal/app/synchronizer"
-	"open-match.dev/open-match/internal/appmain"
+	"github.com/TubbyStubby/om-open-testing/internal/app/backend"
+	"github.com/TubbyStubby/om-open-testing/internal/app/frontend"
+	"github.com/TubbyStubby/om-open-testing/internal/app/query"
+	"github.com/TubbyStubby/om-open-testing/internal/app/synchronizer"
+	"github.com/TubbyStubby/om-open-testing/internal/appmain"
 )
 
 // BindService creates the minimatch service to the server Params.

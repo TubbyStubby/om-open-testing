@@ -20,7 +20,7 @@ import (
 	// "sort"
 	// "time"
 
-	"open-match.dev/open-match/pkg/pb"
+	"github.com/TubbyStubby/om-open-testing/pkg/pb"
 )
 
 // Evaluate is where your custom evaluation logic lives.
