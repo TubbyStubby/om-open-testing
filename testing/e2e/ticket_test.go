@@ -33,7 +33,7 @@ import (
 // TestAssignTickets covers assigning multiple tickets, using two different
 // assignment groups.
 func TestAssignTickets(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
@@ -76,7 +76,7 @@ func TestAssignTickets(t *testing.T) {
 
 // TestAssignTicketsEmpty covers calls to assign when empty TicketIds
 func TestAssignTicketsEmpty(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	req := &pb.AssignTicketsRequest{
@@ -98,7 +98,7 @@ func TestAssignTicketsEmpty(t *testing.T) {
 // TestAssignTicketsInvalidArgument covers various invalid calls to assign
 // tickets.
 func TestAssignTicketsInvalidArgument(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	ctResp, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
@@ -160,7 +160,7 @@ func TestAssignTicketsInvalidArgument(t *testing.T) {
 // being assigned, the assign tickets calls succeeds, however it returns a
 // notice that the ticket was missing.
 func TestAssignTicketsMissingTicket(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
@@ -198,7 +198,7 @@ func TestAssignTicketsMissingTicket(t *testing.T) {
 }
 
 func TestTicketDelete(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
@@ -216,7 +216,7 @@ func TestTicketDelete(t *testing.T) {
 // TestEmptyReleaseTicketsRequest covers that it is valid to not have any ticket
 // ids when releasing tickets.  (though it's not really doing anything...)
 func TestEmptyReleaseTicketsRequest(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	resp, err := om.Backend().ReleaseTickets(ctx, &pb.ReleaseTicketsRequest{
@@ -231,7 +231,7 @@ func TestEmptyReleaseTicketsRequest(t *testing.T) {
 // TestReleaseTickets covers that tickets returned from matches are no longer
 // returned by query tickets, but will return after being released.
 func TestReleaseTickets(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	var ticket *pb.Ticket
@@ -339,7 +339,7 @@ func TestReleaseTickets(t *testing.T) {
 // after calling ReleaseAllTickets.  Does test available fetch matches, not
 // after fetch matches, as that's covered by TestReleaseTickets.
 func TestReleaseAllTickets(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	var ticket *pb.Ticket
@@ -421,7 +421,7 @@ func TestReleaseAllTickets(t *testing.T) {
 // TestReleaseTickets covers that tickets are released after a time if returned
 // by a match but not assigned
 func TestTicketReleaseByTimeout(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	var ticket *pb.Ticket
@@ -548,7 +548,7 @@ func TestCreateTicketErrors(t *testing.T) {
 	} {
 		tt := tt
 		t.Run(tt.name, func(t *testing.T) {
-			om := newOM(t)
+			om := NewOM(t)
 			ctx := context.Background()
 
 			resp, err := om.Frontend().CreateTicket(ctx, tt.req)
@@ -563,7 +563,7 @@ func TestCreateTicketErrors(t *testing.T) {
 // TestAssignedTicketsNotReturnedByQuery covers that when a ticket has been
 // assigned, it will no longer be returned by query.
 func TestAssignedTicketsNotReturnedByQuery(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	returned := func() bool {
@@ -599,7 +599,7 @@ func TestAssignedTicketsNotReturnedByQuery(t *testing.T) {
 // TestAssignedTicketDeleteTimeout covers assigned tickets being deleted after
 // a timeout.
 func TestAssignedTicketDeleteTimeout(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
@@ -632,7 +632,7 @@ func TestAssignedTicketDeleteTimeout(t *testing.T) {
 }
 
 func TestWatchAssignments(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx, cancel := context.WithCancel(context.Background())
 	defer cancel()
 

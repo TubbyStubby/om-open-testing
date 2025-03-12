@@ -33,7 +33,7 @@ import (
 // TestHappyPath does a simple test of successfully creating a match with two tickets.
 func TestHappyPath(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)
@@ -82,7 +82,7 @@ func TestHappyPath(t *testing.T) {
 // another function running in the same cycle does not experience an error.
 func TestMatchFunctionMatchCollision(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)
@@ -169,7 +169,7 @@ func TestMatchFunctionMatchCollision(t *testing.T) {
 // indicating this occurred.
 func TestSynchronizerMatchCollision(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)
@@ -223,7 +223,7 @@ func TestSynchronizerMatchCollision(t *testing.T) {
 // not correspond to any match passed to it.
 func TestEvaluatorReturnInvalidId(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	om.SetMMF(func(ctx context.Context, profile *pb.MatchProfile, out chan<- *pb.Match) error {
 		return nil
@@ -249,7 +249,7 @@ func TestEvaluatorReturnInvalidId(t *testing.T) {
 // match id twice, which causes an error for fetch match callers.
 func TestEvaluatorReturnDuplicateMatchId(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)
@@ -298,7 +298,7 @@ func TestEvaluatorReturnDuplicateMatchId(t *testing.T) {
 // so it probably shouldn't be changed without significant justification.
 func TestMatchWithNoTickets(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	m := &pb.Match{
 		MatchId: "1",
@@ -341,7 +341,7 @@ func TestMatchWithNoTickets(t *testing.T) {
 // ensuring that the error message is returned to the fetch matches call.
 func TestEvaluatorError(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	om.SetMMF(func(ctx context.Context, profile *pb.MatchProfile, out chan<- *pb.Match) error {
 		return nil
@@ -367,7 +367,7 @@ func TestEvaluatorError(t *testing.T) {
 // that the error message is returned to the fetch matches call.
 func TestMMFError(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	om.SetMMF(func(ctx context.Context, profile *pb.MatchProfile, out chan<- *pb.Match) error {
 		return errors.New("my custom error")
@@ -394,7 +394,7 @@ func TestMMFError(t *testing.T) {
 // TestNoMatches covers that returning no matches is acceptable.
 func TestNoMatches(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	om.SetMMF(func(ctx context.Context, profile *pb.MatchProfile, out chan<- *pb.Match) error {
 		return nil
@@ -422,7 +422,7 @@ func TestNoMatches(t *testing.T) {
 // TestNoProfile covers missing the profile field on fetch matches.
 func TestNoProfile(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	stream, err := om.Backend().FetchMatches(ctx, &pb.FetchMatchesRequest{
 		Config:  om.MMFConfigGRPC(),
@@ -439,7 +439,7 @@ func TestNoProfile(t *testing.T) {
 // TestNoConfig covers missing the config field on fetch matches.
 func TestNoConfig(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	stream, err := om.Backend().FetchMatches(ctx, &pb.FetchMatchesRequest{
 		Config:  nil,
@@ -457,7 +457,7 @@ func TestNoConfig(t *testing.T) {
 // evaluator to cancel.
 func TestCancel(t *testing.T) {
 	ctx, cancel := context.WithCancel(context.Background())
-	om := newOM(t)
+	om := NewOM(t)
 
 	startTime := time.Now()
 
@@ -501,7 +501,7 @@ func TestCancel(t *testing.T) {
 // and then passed on.  This keeps things efficiently moving.
 func TestStreaming(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	wg := sync.WaitGroup{}
 	wg.Add(1)
@@ -566,7 +566,7 @@ func TestStreaming(t *testing.T) {
 // wait until the proposal window has closed if the mmfs have already returned.
 func TestRegistrationWindow(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	startTime := time.Now()
 
@@ -599,7 +599,7 @@ func TestRegistrationWindow(t *testing.T) {
 // canceled so that the cycle can complete.
 func TestProposalWindowClose(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	startTime := time.Now()
 
@@ -635,7 +635,7 @@ func TestProposalWindowClose(t *testing.T) {
 // the correct caller.
 func TestMultipleFetchCalls(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)
@@ -717,7 +717,7 @@ func TestMultipleFetchCalls(t *testing.T) {
 // using any of the tickets returned by the first cycle.
 func TestSlowBackendDoesntBlock(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)
@@ -809,7 +809,7 @@ func TestSlowBackendDoesntBlock(t *testing.T) {
 // TestHTTPMMF covers calling the MMF with http config instead of gRPC.
 func TestHTTPMMF(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.Nil(t, err)

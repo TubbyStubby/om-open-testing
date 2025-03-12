@@ -35,7 +35,7 @@ var (
 	testOnlyLoggingLevel         = flag.String("test_only_log_level", "info", "Sets the log level for tests.")
 )
 
-func newOM(t *testing.T) *om {
+func NewOM(t *testing.T) *om {
 	om := &om{
 		t: t,
 	}

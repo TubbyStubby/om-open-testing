@@ -31,7 +31,7 @@ const (
 )
 
 func TestQueryBackfillsWithEmptyPool(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	stream, err := om.Query().QueryBackfills(context.Background(), &pb.QueryBackfillsRequest{Pool: nil})
 	require.NoError(t, err)
 
@@ -41,7 +41,7 @@ func TestQueryBackfillsWithEmptyPool(t *testing.T) {
 }
 
 func TestNoBackfills(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	stream, err := om.Query().QueryBackfills(context.Background(), &pb.QueryBackfillsRequest{Pool: &pb.Pool{}})
 	require.NoError(t, err)
 
@@ -51,7 +51,7 @@ func TestNoBackfills(t *testing.T) {
 }
 
 func TestQueryBackfillsPaging(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 
 	pageSize := 10 // TODO: read from config
 	if pageSize < 1 {
@@ -100,7 +100,7 @@ func TestQueryBackfillsPaging(t *testing.T) {
 
 func TestBackfillQueryAfterMMFUpdate(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 	backfill := &pb.Backfill{
 		SearchFields: &pb.SearchFields{
 			StringArgs: map[string]string{
@@ -166,7 +166,7 @@ func TestBackfillQueryAfterMMFUpdate(t *testing.T) {
 }
 
 func TestBackfillQueryAfterGSUpdate(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	backfill := &pb.Backfill{
 		SearchFields: &pb.SearchFields{
 			StringArgs: map[string]string{

@@ -27,7 +27,7 @@ import (
 )
 
 func TestNoPool(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 
 	{
 		stream, err := om.Query().QueryTickets(context.Background(), &pb.QueryTicketsRequest{Pool: nil})
@@ -49,7 +49,7 @@ func TestNoPool(t *testing.T) {
 }
 
 func TestNoTickets(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 
 	{
 		stream, err := om.Query().QueryTickets(context.Background(), &pb.QueryTicketsRequest{Pool: &pb.Pool{}})
@@ -71,7 +71,7 @@ func TestNoTickets(t *testing.T) {
 }
 
 func TestPaging(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 
 	pageSize := 10 // TODO: read from config
 	if pageSize < 1 {
@@ -151,7 +151,7 @@ func TestTicketNotFound(t *testing.T) {
 }
 
 func returnedByQuery(t *testing.T, tc testcases.TestCase) (found bool) {
-	om := newOM(t)
+	om := NewOM(t)
 
 	{
 		ticket := pb.Ticket{
@@ -185,7 +185,7 @@ func returnedByQuery(t *testing.T, tc testcases.TestCase) (found bool) {
 }
 
 func returnedByQueryID(t *testing.T, tc testcases.TestCase) (found bool) {
-	om := newOM(t)
+	om := NewOM(t)
 
 	{
 		ticket := pb.Ticket{

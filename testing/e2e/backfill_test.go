@@ -31,7 +31,7 @@ import (
 )
 
 func TestCreateGetBackfill(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	bf := &pb.CreateBackfillRequest{Backfill: &pb.Backfill{SearchFields: &pb.SearchFields{
@@ -73,7 +73,7 @@ func TestCreateGetBackfill(t *testing.T) {
 
 // TestBackfillFrontendLifecycle Create, Get and Update Backfill test
 func TestBackfillFrontendLifecycle(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	bf := &pb.Backfill{SearchFields: &pb.SearchFields{
@@ -133,7 +133,7 @@ func TestBackfillFrontendLifecycle(t *testing.T) {
 // TestAcknowledgeBackfill checks that tickets got assigned
 // to the same Connection as it is provided in AcknowledgeBackfill request
 func TestAcknowledgeBackfill(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	bf := &pb.Backfill{SearchFields: &pb.SearchFields{
@@ -183,7 +183,7 @@ func TestAcknowledgeBackfill(t *testing.T) {
 // TestAcknowledgeBackfillDeletedTicket checks that ticket deletion
 // does not block other tickets in backfill from being assigned
 func TestAcknowledgeBackfillDeletedTicket(t *testing.T) {
-	om := newOM(t)
+	om := NewOM(t)
 	ctx := context.Background()
 
 	bf := &pb.Backfill{SearchFields: &pb.SearchFields{
@@ -289,7 +289,7 @@ func createMatchWithBackfill(ctx context.Context, om *om, b *pb.Backfill, t *tes
 
 func TestProposedBackfillCreate(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{
 		Ticket: &pb.Ticket{
@@ -386,7 +386,7 @@ func TestProposedBackfillCreate(t *testing.T) {
 
 func TestProposedBackfillUpdate(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{
 		Ticket: &pb.Ticket{
 			SearchFields: &pb.SearchFields{
@@ -494,7 +494,7 @@ func TestProposedBackfillUpdate(t *testing.T) {
 
 func TestBackfillGenerationMismatch(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{
 		SearchFields: &pb.SearchFields{
 			StringArgs: map[string]string{
@@ -560,7 +560,7 @@ func TestBackfillGenerationMismatch(t *testing.T) {
 
 func TestBackfillSkipNotfoundError(t *testing.T) {
 	ctx := context.Background()
-	om := newOM(t)
+	om := NewOM(t)
 
 	t1, err := om.Frontend().CreateTicket(ctx, &pb.CreateTicketRequest{Ticket: &pb.Ticket{}})
 	require.NoError(t, err)
